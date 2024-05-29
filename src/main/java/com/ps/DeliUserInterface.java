@@ -6,15 +6,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DeliUserInterface {
-    private final String[] regularToppings = {"lettuce", "peppers", "onions","tomatoes",
-            "jalepenos","cucumbers","pickles","guacamole",
+    private final String[] regularToppings = {"lettuce", "peppers", "onions", "tomatoes",
+            "jalepenos", "cucumbers", "pickles", "guacamole",
             "mushrooms"};
-    private final String[] meats = {"steak","ham","salami","roast beef","chicken","bacon"};
-    private final String[] cheeses = {"american","provolone","cheddar", "swiss"};
-    private final String[] condiments = {"mayo","mustard","ketchup", "ranch","thousand island","vinaigrette"};
-    private final String[] sauce ={"au jus","sauce"};
+    private final String[] meats = {"steak", "ham", "salami", "roast beef", "chicken", "bacon"};
+    private final String[] cheeses = {"american", "provolone", "cheddar", "swiss"};
+    private final String[] condiments = {"mayo", "mustard", "ketchup", "ranch", "thousand island", "vinaigrette"};
+    private final String[] sauce = {"au jus", "sauce"};
     private Scanner scanner = new Scanner(System.in);
-
 
 
     //this methods is specifically creating a sandwich to
@@ -23,7 +22,7 @@ public class DeliUserInterface {
     public Sandwich addSandwich() {
 
         Sandwich newSandwich = new Sandwich();
-//user select size
+//  user select size
         System.out.println("\nSelect sandwich size:");
         System.out.println("1. 4 in");
         System.out.println("2. 8 in");
@@ -48,7 +47,6 @@ public class DeliUserInterface {
                 System.out.println("Invalid choice. Defaulting to Medium size.");
         }
 
-
         // Needs refactoring
         System.out.println("Select bread");
         System.out.println("1- White");
@@ -61,21 +59,17 @@ public class DeliUserInterface {
         System.out.print("Please choose an option: ");
 
         int mainMenuCommand = scanner.nextInt();
-
-
         //user selected bread
-//switch allows us to choose options
+        //switch allows us to choose options
         switch (mainMenuCommand) {
             case 1:
                 newSandwich.setBread("White");
                 break;
             case 2:
                 newSandwich.setBread("Wheat");
-                ;
                 break;
             case 3:
                 newSandwich.setBread("Wrap");
-                ;
                 break;
             case 4:
                 newSandwich.setBread("Rye");
@@ -86,17 +80,11 @@ public class DeliUserInterface {
                 newSandwich.setBread("White");
                 System.out.println("Invalid choice. Defaulting to White bread.");
         }
-
-
         System.out.println("Select Meat");
         System.out.println("Extra meat available at additional cost");
-        //ist for displsaying purposes
-
-
+        //ist for displaying purposes
         for (int i = 0; i < meats.length; i++) {
-
             System.out.println((i + 1) + " " + meats[i]);
-
         }
 
         System.out.println("Please select all options that apply");
@@ -117,24 +105,16 @@ public class DeliUserInterface {
 
         newSandwich.setMeats(meatArray);
 //        System.out.println(newSandwich.getMeats());
-
-
-        /// for now we just want to display the meant choice
+///       for now we just want to display the meant choice
 
 
         System.out.println("Select cheese");
-        System.out.println("Extra meat available at additional cost");
+        System.out.println("Extra cheese available at additional cost");
         for (int i = 0; i < cheeses.length; i++) {
-
             System.out.println((i + 1) + " " + cheeses[i]);
         }
-
-
-//
-//
-//        }
-//        System.out.println("Please select all options that apply");
-//        Integer cheeseSelection = scanner.nextInt();
+        System.out.println("Please select all options that apply");
+        Integer cheeseSelection = scanner.nextInt();
 //
 //        System.out.println(selection);
 //        String cheeseSelectionString = selection.toString();
@@ -156,11 +136,6 @@ public class DeliUserInterface {
 //        /// for now we just want to display the meant choice
 //        return newSandwich;
 
-
-        }
-
-
-//
 //    public void orderScreen(){
 //
 //        System.out.println("1.Add Sandwich");
@@ -170,24 +145,17 @@ public class DeliUserInterface {
 //    System.out.println("5.Cancel Order");
 //
 //    int selection = scanner.nextInt();
-
-
-        switch (cheeseSelection){
-
-
-        case 1:
-            System.out.println(addSandwich().toString());
-        case 2:
-            System.out.println("Add Drink");
-        case 3:
-            System.out.println("Add Chips");
-        case 4:
-            System.out.println("Checkout");
-
-
-    }
-
+        switch (cheeseSelection) {
+            case 1:
+                System.out.println(addSandwich().toString());
+            case 2:
+                System.out.println("Add Drink");
+            case 3:
+                System.out.println("Add Chips");
+            case 4:
+                System.out.println("Checkout");
         }
 
-//    }
-//
+        return newSandwich;
+    }
+}

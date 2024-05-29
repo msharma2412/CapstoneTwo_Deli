@@ -8,17 +8,10 @@ public class Main {
     public static DeliUserInterface deliUserInterface = new DeliUserInterface();
 
     public static void main(String[] args) {
-
-
-
         System.out.println("Welcome to our Deli");
         System.out.println();
         System.out.println();
         homeScreen();
-
-
-
-//
     }
 
     public static void homeScreen(){
@@ -40,9 +33,7 @@ public class Main {
         }
     }
     static void orderScreen(){
-        deliUserInterface.Order();
-
-
+        deliUserInterface.addSandwich();
     }
 
 
