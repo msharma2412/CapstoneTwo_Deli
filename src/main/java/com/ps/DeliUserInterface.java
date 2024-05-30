@@ -85,136 +85,135 @@ public class DeliUserInterface {
             default:
                 newSandwich.setBread("White");
                 System.out.println("Invalid choice. Defaulting to White bread.");
-
-                System.out.println("Would you like your sandwich toasted?");
-                System.out.println("1 for toasted");
-                System.out.println("2 for untoasted");
-
-                int toastedChoice = scanner.nextInt();
-
-                boolean toasted = false;
-
-                switch (toastedChoice) {
-                    case 1:
-                        toasted = true;
-                        break;
-                    case 2:
-                        toasted = false;
-                        break;
-                    default:
-                        System.out.println("Invalid choice. Assuming untoasted.");
-                        toasted = false;
-                        break;
-                }
-
-
-
-
-
-
-
         }
-                System.out.println("Select Meat");
-                System.out.println("Extra meat available at additional cost");
-                //ist for displaying purposes
-                for (int i = 0; i < meats.length; i++) {
-                    System.out.println((i + 1) + " " + meats[i]);
-                }
 
-                System.out.println("Please select all options that apply");
+        System.out.println("Would you like your sandwich toasted?");
+        System.out.println("1 for toasted");
+        System.out.println("2 for untoasted");
 
-                Integer selection = scanner.nextInt();
+        int toastedChoice = scanner.nextInt();
 
-                // the best way to retrieve multiple toppings.
-                // from readline to add to arrays on Sandwich class
-                System.out.println(selection);
-                String selectionString = selection.toString();
-                String[] selectionArray = selectionString.split("");
+        boolean toasted = false;
 
-                ArrayList<String> meatArray = new ArrayList<>();
+        switch (toastedChoice) {
+            case 1:
+                toasted = true;
+                break;
+            case 2:
+                toasted = false;
+                break;
+            default:
+                System.out.println("Invalid choice. Assuming untoasted.");
+                toasted = false;
+                break;
+        }
 
-                for (String index : selectionArray) {
-                    meatArray.add(meats[Integer.parseInt(index) - 1]);
-                }
+        System.out.println("Select Meat");
+        System.out.println("Extra meat available at additional cost");
+        //ist for displaying purposes
+        for (int i = 0; i < meats.length; i++) {
+            System.out.println((i + 1) + " " + meats[i]);
+        }
 
-                newSandwich.setMeats(meatArray);
+        System.out.println("Please select all options that apply");
+
+        Integer selection = scanner.nextInt();
+
+        // the best way to retrieve multiple toppings.
+        // from readline to add to arrays on Sandwich class
+        System.out.println(selection);
+        String selectionString = selection.toString();
+        String[] selectionArray = selectionString.split("");
+
+        ArrayList<String> meatArray = new ArrayList<>();
+
+        for (String index : selectionArray) {
+            meatArray.add(meats[Integer.parseInt(index) - 1]);
+        }
+
+        newSandwich.setMeats(meatArray);
 //        System.out.println(newSandwich.getMeats());
 ///       for now we just want to display the meant choice
 
 
-                System.out.println("Select cheese");
-                System.out.println("Extra cheese available at additional cost");
-                for (int i = 0; i < cheeses.length; i++) {
-                    System.out.println((i + 1) + " " + cheeses[i]);
-                }
-                System.out.println("Please select all options that apply");
-                Integer cheeseSelection = scanner.nextInt();
+        System.out.println("Select cheese");
+        System.out.println("Extra cheese available at additional cost");
+        for (int i = 0; i < cheeses.length; i++) {
+            System.out.println((i + 1) + " " + cheeses[i]);
+        }
+        System.out.println("Please select all options that apply");
+        Integer cheeseSelection = scanner.nextInt();
+
+        // End of Cheese
+
+        // Begin Topping
+        System.out.println("Select topping");
+        System.out.println("Choose topping");
+        for (int i = 0; i < regularToppings.length; i++) {
+            System.out.println((i + 1) + " " + regularToppings[i]);
+        }
+        System.out.println("Please select all options that apply");
+        Integer regularToppingsSelection = scanner.nextInt();
+        // Add the toppings to the sandwich
+
+        //
+        System.out.println("Select condiments");
+        System.out.println("Choose condiments");
+        for (int i = 0; i < condiments.length; i++) {
+            System.out.println((i + 1) + " " + condiments[i]);
+        }
+        System.out.println("Please select all options that apply");
+        Integer condiments = scanner.nextInt();
+
+        System.out.println("Select sauce");
+        System.out.println("Choose sauce");
+        for (int i = 0; i < sauce.length; i++) {
+            System.out.println((i + 1) + " " + sauce[i]);
+        }
+        System.out.println("Please select all chip options that apply");
+        Integer sauce = scanner.nextInt();
 
 
-                System.out.println("Select topping");
-                System.out.println("Choose topping");
-                for (int i = 0; i < regularToppings.length; i++) {
-                    System.out.println((i + 1) + " " + regularToppings[i]);
-                }
-                System.out.println("Please select all options that apply");
-                Integer regularToppingsSelection = scanner.nextInt();
+        Drink newDrink = new Drink();
 
-                System.out.println("Select condiments");
-                System.out.println("Choose condiments");
-                for (int i = 0; i < condiments.length; i++) {
-                    System.out.println((i + 1) + " " + condiments[i]);
-                }
-                System.out.println("Please select all options that apply");
-                Integer condiments = scanner.nextInt();
+        System.out.println("Select drink");
+        System.out.println("Choose drink");
+        for (int i = 0; i < Drink.length; i++) {
+            System.out.println((i + 1) + " " + Drink[i]);
+        }
+        System.out.println("Please select all drink options that apply");
+        Integer drink = scanner.nextInt();
 
-                System.out.println("Select sauce");
-                System.out.println("Choose sauce");
-                for (int i = 0; i < sauce.length; i++) {
-                    System.out.println((i + 1) + " " + sauce[i]);
-                }
-                System.out.println("Please select all chip options that apply");
-                Integer sauce = scanner.nextInt();
+        Chip newChip = new Chip();
+
+        System.out.println("Select chip");
+        System.out.println("Choose chip");
+        for (int i = 0; i < Chip.length; i++) {
+            System.out.println((i + 1) + " " + Chip[i]);
+        }
+        System.out.println("Please select all options that apply");
+        Integer Chip = scanner.nextInt();
 
 
+        switch (cheeseSelection) {
+            case 1:
+                //     System.out.println(addSandwich().toString());
+            case 2:
+                System.out.println("Add Drink");
+            case 3:
+                System.out.println("Add Chips");
+            case 4:
+                System.out.println("Checkout");
+        }
 
-                Drink newDrink = new Drink();
-
-                System.out.println("Select drink");
-                System.out.println("Choose drink");
-                for (int i = 0; i < Drink.length; i++) {
-                System.out.println((i + 1) + " " + Drink[i]);
-                 }
-                 System.out.println("Please select all drink options that apply");
-                Integer drink = scanner.nextInt();
-
-                  Chip newChip = new Chip();
-
-                 System.out.println("Select chip");
-                 System.out.println("Choose chip");
-                 for (int i = 0; i < Chip.length; i++) {
-                System.out.println((i + 1) + " " + Chip[i]);
-                 }
-                System.out.println("Please select all options that apply");
-                Integer Chip = scanner.nextInt();
+        // Development
+        System.out.println(newSandwich);
+        System.out.println(newSandwich.getSandwichPrice());
+        // Development
 
 
-
-
-
-
-
-                switch (cheeseSelection) {
-                    case 1:
-                   //     System.out.println(addSandwich().toString());
-                    case 2:
-                        System.out.println("Add Drink");
-                    case 3:
-                        System.out.println("Add Chips");
-                    case 4:
-                        System.out.println("Checkout");
-                }
-
-                return newSandwich;
+        // Add the sandwich to the order
+        return newSandwich;
 
 //        private void displaySandwich(List<Sandwich> sandwich){
 //
@@ -230,8 +229,13 @@ public class DeliUserInterface {
 //                        vehicle.getOdometer(),
 //                        vehicle.getPrice()
 //                );
-            }
-        }
+    }
+
+    public void addDrink(Drink drink){
+
+        // Last line: Add the drink to the order
+    }
+}
 
 
 

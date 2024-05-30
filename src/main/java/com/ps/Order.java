@@ -10,6 +10,9 @@ public class Order {
    public Order(){
    }
 
+   public void addProduct(Product product){
+        customerOrder.add(product);
+   }
 
 
 // user logiic should be in thr userinterface
