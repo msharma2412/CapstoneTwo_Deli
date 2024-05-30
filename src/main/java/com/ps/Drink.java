@@ -1,12 +1,13 @@
 package com.ps;
 
 public class Drink extends Product {
+    private final String[] Drink = {"Sprite", "Fanta", "Coke"};
 
         private String size;
 
         private String flavor;
 
-    public Drink(String size, String flavor) {
+    public Drink() {
         this.size = size;
         this.flavor = flavor;
     }

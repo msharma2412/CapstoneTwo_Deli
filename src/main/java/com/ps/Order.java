@@ -29,9 +29,19 @@ public class Order {
 
     }
 
+    // Calculate and display the total price
 
 
-    }
+    // Proceed with payment or other checkout processes
+}
+
+// Method to calculate the total price based on sandwich type and toppings
+
+// Example Sandwich class for contex
+
+
+
+
         // in the order class. it is a blueprint of sandwiches. You will get info
 //from the user to get info from the user and use getters and setters from the
-// look up how to
+// look up how tozz

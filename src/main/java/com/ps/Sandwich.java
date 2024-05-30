@@ -158,7 +158,7 @@ public class Sandwich extends Product {
                 ", sauces=" + sauces +
                 '}';
     }
-
+// add toating option as an atribute
     //array of regularand premium toppings
     // extra toppings
     // length and bread should be 2 separte things. sandwich.size

@@ -1,7 +1,7 @@
 package com.ps;
 
 public class Chip extends Product{
-
+    private final String[] Chip = {"Lays", "Doritos", "Fritos"};
 
 
     @Override
